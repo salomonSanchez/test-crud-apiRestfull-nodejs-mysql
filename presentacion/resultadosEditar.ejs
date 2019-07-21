@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>resultados</title>
+    <link rel='stylesheet' href="/css/style.css"/>
+</head>
+  <body>
+        <div class="container card border-secondary" style="max-width: 50rem;"><br />
+            <h1 class="text-center">Edit your Register</h1><br />
+            <form action="/update/<%= Data.id %>" method="POST">
+              <div class="row">
+                <div class="col-md-4"></div>
+                <div class="form-group col-md-4">
+                  <label for="to">Nombre:</label>
+                  <input type="text" class="form-control" name="nombre" value="<%= Data.nombre%>"  required>
+                </div>
+              </div>
+      
+              <div class="row">
+                <div class="col-md-4"></div>
+                <div class="form-group col-md-4">
+                  <label for="subject">Precio:</label>
+                  <input type="text" class="form-control"name="peso"  value="<%= Data.peso%>" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4"></div>
+                <div class="form-group col-md-4">
+                  <label for="subject">Gènero:</label>
+                  <input type="text" class="form-control"name="genero"  value="<%= Data.genero%>" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4"></div>
+                <div class="form-group col-md-4">
+                  <button type="submit" class="btn btn-success">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>   
+  </body>
+</html>

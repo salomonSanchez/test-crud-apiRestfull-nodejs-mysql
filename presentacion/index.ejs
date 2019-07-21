@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Product</title>
+        <link rel='stylesheet' href=""/>
+    </head>
+    <body>
+        <div class="containerborder" style="max-width: 100rem;">
+            <div class="row">
+                <div class="col-md-5">
+                        <div class="card border-secondary mb-3 mt-5 ml-5 text-center" style="max-width: 25rem; max-height: 25rem">
+                            <h1>register your inventary of animals</h1>
+                                <form action="/insertar" method="POST">
+                                    <div class="row ml-2">
+                                            <label for="to">Nombre:</label>
+                                            <div class="ml-2"></div>
+                                            <div class="form-group ">
+                                              <input type="text" name="nombre" class="form-control" required>
+                                            </div>
+                                     </div>
+                                  
+                                    <div class="row ml-2">
+                                            <label for="subject">Precio:</label>
+                                            <div class="ml-3"></div>
+                                            <div class="form-group ">  
+                                              <input type="text" name="peso" class="form-control" required>
+                                            </div>
+                                     </div>
+                                     <div class="row ml-2">
+                                        <label for="subject">Genero:</label>
+                                        <div class="ml-3"></div>
+                                        <div class="form-group ">  
+                                          <input type="text" name="genero" class="form-control" required>
+                                        </div>
+                                 </div>
+                                          
+                                    <div class="row">
+                                            <div class="ml-2"></div>
+                                            <div class="form-group col-md-6">
+                                             <input class="btn btn-success" type="submit" value="Save" />
+                                            </div>
+                                     </div>
+                                </form>
+                        </div>
+                </div>
+                <div class="col-md-7">
+                        <div class="card border-secondary mb-3 mt-5 mr-5 text-center" style="max-width: 100rem;">
+                                <table class="table table-bordered table-hover table-wrapper-scroll-y">
+                                    <thead>
+                                        <tr class="table-primary">
+                                            <th scope="col">id</th>
+                                            <th scope="col">nombre</th>
+                                            <th scope="col">peso</th>
+                                            <th scope="col">genero</th>
+                                            <th scope="col">Actions</th>
+                                            
+                                         </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% if (Data) {%>
+                                                <% for(var i=0; i<Data.length; i++) { %>
+                                                    <tr>
+                                                        <td><%=Data[i].id%></td>
+                                                        <td><%=Data[i].nombre%></td>
+                                                        <td><%=Data[i].peso%></td>
+                                                        <td><%=Data[i].genero%></td>
+                                                        <td>
+                                                        <a href="/update/<%= Data[i].id %>" class="btn btn-success">Edit</a>
+                                                        <a href="/delete/<%= Data[i].id %>" class="btn btn-danger">Delete</a>
+                                                        </td>
+                                                    </tr>
+                                                <%}%>
+                                            <% } %>
+                                    </tbody>
+                                </table>
+                        </div>
+                </div>
+            </div>            
+        </div>
+    </body>
+</html>

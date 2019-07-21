@@ -1,0 +1,33 @@
+{
+  "name": "Inventario-crud-animales",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test/run.js"
+  },
+  "scripts": {
+    "test": "mocha",
+    "test2": "nyc mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuelRojas1/parcial-1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manuelRojas1/parcial-1/issues"
+  },
+  "homepage": "https://github.com/manuelRojas1/parcial-1#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "chai": "^4.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mocha": "^6.1.4",
+    "mysql": "^2.17.1",
+    "nyc": "^14.1.1"
+  }
+}
